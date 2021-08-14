@@ -1,0 +1,54 @@
+/* 변수 선언하기 */
+:root{
+	/* color */
+	--white-color:#FFFFFF;
+	--black-color:#000000;
+	--blue-color:#008DDF;
+	--red-color:#D92026;
+	--grey-dark-color:#A9A9A9;
+	--grey-light-color:#DCDCDC;
+
+	/* size */
+	--padding: 12px;
+	--avatar-size: 36px;
+
+	/* font size */
+	--font-large: 18px;
+	--font-medium: 14px;
+	--font-small: 12px;
+	--font-micro: 10px;
+}
+
+/* 공통적용  */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box; /* 테두리를 기준으로 크기 지정 */
+
+}
+
+body {
+	font-family: Roboto;
+}
+
+
+header {
+	display: flex;	/* 플렉스로 지정 */
+	justify-content: space-between; /* 플렉스 요소 사이들만 공간을 지정*/
+	padding: var(--padding);
+	background-color: var(--black-color);	/* 배경색 지정*/
+	color: var(--white-color); /* 글자색 흰색 */
+}
+
+header .logo {
+	font-size: var(--font-large); /* 로고 폰트 크기 지정*/
+}
+
+header .logo i {
+	color: var(--red-color); /* 로코 아이콘 색깔 빨강색*/
+}
+
+/* 헤더 아이콘(서치) 패딩 값 지정하기  */
+header .icons .fa-search {
+	margin-right: var(--padding);
+}

@@ -52,3 +52,16 @@ header .logo i {
 header .icons .fa-search {
 	margin-right: var(--padding);
 }
+
+/* vedio player */
+.player{
+	position: sticky;	/*비디오 플레이어 위에 고정*/
+	top: 0;  /*고정되는 위치 지정 */
+	text-align: center;
+	background-color: var(--black-color);
+}
+.player video{
+	width: 100%;	/* 비디오 플레이어를 반응형으로 만들기*/
+	height: 100%;
+	max-width: 1000px; /* 최대 크기 지정 */
+}

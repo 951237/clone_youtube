@@ -76,7 +76,7 @@ header .icons .fa-search {
 	max-width: 1000px; /* 최대 크기 지정 */
 }
 
-.info {
+.body > .info {
 	padding: var(--padding);
 }
 
@@ -176,4 +176,52 @@ header .icons .fa-search {
 	font-size: var(--font-medium);
 }
 
-/*  */
+/*  upNext */
+.upNext{
+	padding: var(--padding);
+}
+
+.upNext > .title{  	/* 자식 title만 지정 : > */
+	font-size: val(--font-medium);
+	color: var(--grey-dark-color);
+	margin-bottom: calc(var(--padding) / 2);
+}
+
+.upNext .item{
+	display: flex;
+	margin-top: var(--padding);
+}
+
+.upNext .item .img{
+	flex: 1 1 35%;	
+	margin-right: var(--padding);
+}
+
+.upNext .item .img img{
+	width: 100%;
+}
+
+.upNext .item .info{
+	flex: 1 1 60%;
+}
+
+.upNext .item .moreBtn{
+	flex: 1 1 5%;
+}
+
+.upNext .item .info{
+	display: flex;
+	flex-direction: column;
+}
+
+/* 스크린의 크기에 따라서 모양을 달리 할 부분 */
+.infoAndUpNext{
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 760px) {	/* 미디어 쿼리 - 스크린이 760보다 작을 경우에 */ 
+	.infoAndUpNext {
+		flex-direction: row;	/* 플렉스를 row로 변환 */
+	}
+}

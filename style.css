@@ -1,5 +1,5 @@
 /* 변수 선언하기 */
-:root{
+:root {
 	/* color */
 	--white-color:#FFFFFF;
 	--black-color:#000000;
@@ -64,7 +64,7 @@ header .icons .fa-search {
 }
 
 /* vedio player */
-.player{
+.player {
 	position: sticky;	/*비디오 플레이어 위에 고정*/
 	top: 0;  /*고정되는 위치 지정 */
 	text-align: center;
@@ -90,7 +90,7 @@ header .icons .fa-search {
 	margin-right: var(--padding);	/* 해쉬태그 오른쪽으로 여백주기 */
 }
 
-.info .metadata .titleAndButton{
+.info .metadata .titleAndButton {
 	display: flex;	/* 버튼을 글자와 함께 배치 */
 }
 
@@ -112,3 +112,28 @@ header .icons .fa-search {
 	font-size: var(--font-small);
 	color: var(--grey-dark-color);
 }
+
+.actions {
+	display: flex;	/* 플렉스로 지정 */
+	justify-content: space-around;  /* 아이콘들을 일정한 간격으로 */
+	margin: var(--padding) 0;
+}
+
+.actions button {
+	display: flex;
+	flex-direction: column;	  /* 아이콘을 칼럼으로 정렬 */
+	font-size: var(--font-small);
+	color: var(--grey-dark-color);
+}
+
+.actions button i {
+	margin: 0 auto;	/* 아이콘들을 가운데로 정렬할 때 상하마진은 그대로 두고 좌우 여백을 auto로 지정 */
+	margin-bottom: cal(var(--padding) /2 );
+	font-size: 16px;
+}
+
+.actions button i.active {
+	color: var(--blue-color);
+}
+
+/* channel Descriptions */

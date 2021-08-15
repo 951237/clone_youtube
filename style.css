@@ -31,6 +31,16 @@ body {
 	font-family: Roboto;
 }
 
+ul {
+	list-style: none;	/* 리스트의 속성 없애개 */
+}
+
+button,
+button:focus {
+	border: none;	/* 버튼의 외곽선 없애기 */
+	cursor: pointer;  /* 버튼위 커서 포인터로 바꾸기 */
+	outline: none;  /* 버튼 외곽선 없애기 */
+}
 
 header {
 	display: flex;	/* 플렉스로 지정 */
@@ -50,7 +60,7 @@ header .logo i {
 
 /* 헤더 아이콘(서치) 패딩 값 지정하기  */
 header .icons .fa-search {
-	margin-right: var(--padding);
+	margin-right: var(--padding);  /* 오른쪽 마진값을 패딩의 크기 만큼 지정 */
 }
 
 /* vedio player */
@@ -64,4 +74,41 @@ header .icons .fa-search {
 	width: 100%;	/* 비디오 플레이어를 반응형으로 만들기*/
 	height: 100%;
 	max-width: 1000px; /* 최대 크기 지정 */
+}
+
+.info {
+	padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+	display: flex;
+	font-size: var(--font-small); 
+	color: var(--blue-color);
+}
+
+.info .metadata .hashtags li {
+	margin-right: var(--padding);	/* 해쉬태그 오른쪽으로 여백주기 */
+}
+
+.info .metadata .titleAndButton{
+	display: flex;	/* 버튼을 글자와 함께 배치 */
+}
+
+.info .metadata .titleAndButton .title {
+	font-size: var(--font-medium);
+	/* 글자가 많을 경우 줄 제한 line clamp */
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2; /* 2줄 제한 */
+	overflow: hidden;
+	margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .moreButton {
+	height: 100%;
+}
+
+.info .metadata .views {
+	font-size: var(--font-small);
+	color: var(--grey-dark-color);
 }
